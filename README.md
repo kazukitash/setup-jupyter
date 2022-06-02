@@ -9,6 +9,7 @@ macOS 上に Python の分析開発環境が構築される。
 以下の導入が前提。[setup-macos](https://github.com/kazukitash/setup-macos)でインストール方法を説明しているので参照すること。
 
 - HomeBrew
+- Visual Studio Code
 
 ## 目次
 
@@ -105,4 +106,73 @@ source testenv/bin/activate
 
 ```shell
 deactivate
+```
+
+## python 分析環境の準備
+
+ユーザールートの test フォルダをプロジェクトフォルダとする例を示す。test フォルダを作成してフォルダに移動する。
+
+```shell
+mkdir ~/test
+cd ~/test
+```
+
+venv 環境を作成する。
+
+```shell
+python -m venv testenv
+source ./testenv/bin/activate
+```
+
+ターミナルの先頭が以下のようになっていることを確認する。
+
+```shell
+(testenv) $
+```
+
+test プロジェクトに jupyter をインストールする。
+
+```shell
+pip install jupyter
+pip install numpy
+pip install pandas
+pip install matplotlib
+pip install scikit-learn
+```
+
+Visual Studio Code で Jupyter ファイルを開けるように拡張機能をインストールする。
+
+```shell
+code --install-extension ms-toolsai.jupyter
+```
+
+```shell
+touch test.ipynb
+```
+
+プロジェクトのフォルダを Visual Studio Code で開く。
+フォルダを開かないと jupyter で venv 環境をカーネルとして選択できないので注意。
+
+```
+code .
+```
+
+Visual Studio Code で左のファイルパネルから test.ipynb を開く。
+
+![](images/open_file.png)
+
+![](images/select_kernel.png)
+
+以下を入力してエラーがなく「hello world」が出力されれば問題なし。
+
+```
+print("hello world)
+```
+
+![](images/hello_world.png)
+
+以下のコマンドで
+
+```
+!pip install package名
 ```
