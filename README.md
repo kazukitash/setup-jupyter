@@ -10,15 +10,13 @@ macOS 上に Python 用の開発環境が構築される。
 
 - HomeBrew
 
-## すること
+## 目次
 
 1. pyenv のインストール
 2. 最新の python 言語のインストール
 3. venv の使い方
 
-## Getting started
-
-### pyenv のインストール
+## pyenv のインストール
 
 macOS の CUI ソフトウェア管理ツール HomeBrew で pyenv をインストールする。
 
@@ -41,7 +39,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-### 最新の python 言語のインストール
+## 最新の python 言語のインストール
 
 以下のコマンドでインストール可能な python を確認する。
 
@@ -80,7 +78,7 @@ pyenv global 3.10.2
 pyenv local 3.10.2
 ```
 
-### venv の使い方
+## venv の使い方
 
 venv を利用するとプロジェクト（フォルダ）ごとにパッケージの管理ができるようになる。
 
