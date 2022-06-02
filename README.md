@@ -1,8 +1,8 @@
-# Python の環境構築
+# Python の分析環境構築
 
 ## できること
 
-macOS 上に Python 用の開発環境が構築される。
+macOS 上に Python の分析開発環境が構築される。
 
 ## 前提
 
