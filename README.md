@@ -16,41 +16,6 @@ macOS 上に Python 用の開発環境が構築される。
 2. 最新の python 言語のインストール
 3. venv の使い方
 
-## インストールする Python のバージョンを管理する理由
-
-ソフトウェアを安定して動作させるために、プログラミング言語のバージョンを管理する。プロジェクトごとにプログラミング言語とそのパッケージのバージョンを管理することで、意図しないバージョンでソフトウェアが実行され誤動作することを防ぐ。Python 自体のバージョンを管理する pyenv と実行環境で使用されるパッケージを管理する venv
-
-```mermaid
-flowchart
-  subgraph pyenv
-    subgraph Python 3.8
-      subgraph "venv/env1"
-        pkg1[Package 1.0]
-        pkg2[Package 2.0]
-      end
-      subgraph "venv/env2"
-        pkg3[Package 1.1]
-        pkg4[Package 2.0]
-      end
-    end
-    subgraph Python 3.9
-      subgraph "venv/env3"
-        pkg5[Package 1.1]
-        pkg6[Package 2.1]
-      end
-    end
-  end
-  prj1(プロジェクト 1)
-  prj1 --> pkg1
-  prj1 --> pkg2
-  prj2(プロジェクト 2)
-  prj2 --> pkg3
-  prj2 --> pkg4
-  prj3(プロジェクト 3)
-  prj3 --> pkg5
-  prj3 --> pkg6
-```
-
 ## Getting started
 
 ### pyenv のインストール
